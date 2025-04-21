@@ -1,0 +1,1 @@
+export { IconGridSection } from "./IconGridSection";

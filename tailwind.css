@@ -1,0 +1,137 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --body-base-font-family: "Inter", Helvetica;
+  --body-base-font-size: 16px;
+  --body-base-font-style: normal;
+  --body-base-font-weight: 400;
+  --body-base-letter-spacing: 0px;
+  --body-base-line-height: 140%;
+  --body-strong-font-family: "Inter", Helvetica;
+  --body-strong-font-size: 16px;
+  --body-strong-font-style: normal;
+  --body-strong-font-weight: 600;
+  --body-strong-letter-spacing: 0px;
+  --body-strong-line-height: 140%;
+  --heading-font-family: "Inter", Helvetica;
+  --heading-font-size: 24px;
+  --heading-font-style: normal;
+  --heading-font-weight: 600;
+  --heading-letter-spacing: -0.48px;
+  --heading-line-height: 120.00000762939453%;
+  --image-placeholder: rgba(227, 227, 227, 1);
+  --single-line-body-base-font-family: "Inter", Helvetica;
+  --single-line-body-base-font-size: 16px;
+  --single-line-body-base-font-style: normal;
+  --single-line-body-base-font-weight: 400;
+  --single-line-body-base-letter-spacing: 0px;
+  --single-line-body-base-line-height: 100%;
+  --subheading-font-family: "Inter", Helvetica;
+  --subheading-font-size: 20px;
+  --subheading-font-style: normal;
+  --subheading-font-weight: 400;
+  --subheading-letter-spacing: 0px;
+  --subheading-line-height: 120.00000762939453%;
+  --subtitle-font-family: "Inter", Helvetica;
+  --subtitle-font-size: 32px;
+  --subtitle-font-style: normal;
+  --subtitle-font-weight: 400;
+  --subtitle-letter-spacing: 0px;
+  --subtitle-line-height: 120.00000762939453%;
+  --title-hero-font-family: "Inter", Helvetica;
+  --title-hero-font-size: 72px;
+  --title-hero-font-style: normal;
+  --title-hero-font-weight: 700;
+  --title-hero-letter-spacing: -2.16px;
+  --title-hero-line-height: 120.00000762939453%;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: transparent;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}

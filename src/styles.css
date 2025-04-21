@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --body-base-font-family: "Inter", Helvetica;
+  --body-base-font-size: 16px;
+  --body-base-font-style: normal;
+  --body-base-font-weight: 400;
+  --body-base-letter-spacing: 0px;
+  --body-base-line-height: 140%;
+  --body-strong-font-family: "Inter", Helvetica;
+  --body-strong-font-size: 16px;
+  --body-strong-font-style: normal;
+  --body-strong-font-weight: 600;
+  --body-strong-letter-spacing: 0px;
+  --body-strong-line-height: 140%;
+  --heading-font-family: "Inter", Helvetica;
+  --heading-font-size: 24px;
+  --heading-font-style: normal;
+  --heading-font-weight: 600;
+  --heading-letter-spacing: -0.48px;
+  --heading-line-height: 120.00000762939453%;
+  --image-placeholder: rgba(227, 227, 227, 1);
+  --single-line-body-base-font-family: "Inter", Helvetica;
+  --single-line-body-base-font-size: 16px;
+  --single-line-body-base-font-style: normal;
+  --single-line-body-base-font-weight: 400;
+  --single-line-body-base-letter-spacing: 0px;
+  --single-line-body-base-line-height: 100%;
+  --subheading-font-family: "Inter", Helvetica;
+  --subheading-font-size: 20px;
+  --subheading-font-style: normal;
+  --subheading-font-weight: 400;
+  --subheading-letter-spacing: 0px;
+  --subheading-line-height: 120.00000762939453%;
+  --subtitle-font-family: "Inter", Helvetica;
+  --subtitle-font-size: 32px;
+  --subtitle-font-style: normal;
+  --subtitle-font-weight: 400;
+  --subtitle-letter-spacing: 0px;
+  --subtitle-line-height: 120.00000762939453%;
+  --title-hero-font-family: "Inter", Helvetica;
+  --title-hero-font-size: 72px;
+  --title-hero-font-style: normal;
+  --title-hero-font-weight: 700;
+  --title-hero-letter-spacing: -2.16px;
+  --title-hero-line-height: 120.00000762939453%;
+}
+
+body {
+  margin: 0;
+  background-color: #0A0A0A;
+  color: #FFFFFF;
+  font-family: var(--body-base-font-family);
+}
