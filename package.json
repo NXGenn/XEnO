@@ -10,13 +10,11 @@
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.1",
-    "@radix-ui/react-checkbox": "^1.2.2",
     "@radix-ui/react-navigation-menu": "^1.2.1",
     "@radix-ui/react-separator": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-toggle": "^1.1.0",
     "@radix-ui/react-toggle-group": "^1.1.0",
-    "@supabase/supabase-js": "^2.49.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "2.1.1",
     "ethers": "^5.7.2",
@@ -27,8 +25,7 @@
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.8.1",
     "react-router-dom": "^6.8.1",
-    "tailwind-merge": "2.5.4",
-    "zustand": "^5.0.3"
+    "tailwind-merge": "2.5.4"
   },
   "devDependencies": {
     "@types/react": "18.2.0",
