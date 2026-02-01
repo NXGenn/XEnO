@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Upload, Image as ImageIcon, Check, AlertCircle, Copy, CheckCheck, RefreshCw } from "lucide-react";
+import { Upload, Image as ImageIcon, Check, AlertCircle, Copy, CheckCheck, RefreshCw, ExternalLink, BookOpen } from "lucide-react";
 import { Button } from "../../components/ui/button";
 import { HeaderSection } from "../HomePage/sections/HeaderSection/HeaderSection";
 import { useWallet } from "../../contexts/WalletContext";
@@ -260,6 +260,55 @@ export const MintPage = (): JSX.Element => {
                         <p className="text-white font-mono text-sm break-all">
                           {nftDetails.onChain.contractAddress}
                         </p>
+
+                        {nftDetails.onChain?.tokenId && (
+                          <div className="mt-4 pt-4 border-t border-gray-700">
+                            <p className="text-gray-400 text-xs mb-3">To import this NFT to MetaMask:</p>
+                            <ol className="text-gray-300 text-xs space-y-2">
+                              <li className="flex gap-2">
+                                <span className="text-web3-red font-semibold">1.</span>
+                                <span>Open MetaMask and switch to Polygon network</span>
+                              </li>
+                              <li className="flex gap-2">
+                                <span className="text-web3-red font-semibold">2.</span>
+                                <span>Click "Import tokens" in the NFTs tab</span>
+                              </li>
+                              <li className="flex gap-2">
+                                <span className="text-web3-red font-semibold">3.</span>
+                                <span>Paste the collection address above</span>
+                              </li>
+                              <li className="flex gap-2">
+                                <span className="text-web3-red font-semibold">4.</span>
+                                <span>Enter the token ID below</span>
+                              </li>
+                              <li className="flex gap-2">
+                                <span className="text-web3-red font-semibold">5.</span>
+                                <span>Click "Import" to view your certificate NFT</span>
+                              </li>
+                            </ol>
+
+                            <div className="mt-3 flex gap-2">
+                              <a
+                                href="https://support.metamask.io/hc/en-us/articles/360058238591"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-web3-red hover:text-web3-red/80 text-xs flex items-center gap-1"
+                              >
+                                <BookOpen className="h-3 w-3" />
+                                MetaMask Guide
+                              </a>
+                              <a
+                                href={`https://polygonscan.com/token/${nftDetails.onChain.contractAddress}?a=${nftDetails.onChain.contractAddress}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-web3-red hover:text-web3-red/80 text-xs flex items-center gap-1"
+                              >
+                                <ExternalLink className="h-3 w-3" />
+                                View on PolygonScan
+                              </a>
+                            </div>
+                          </div>
+                        )}
                       </div>
                     )}
 
