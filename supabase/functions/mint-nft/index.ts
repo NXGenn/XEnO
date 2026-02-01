@@ -1,4 +1,4 @@
-import { corsHeaders } from "../_shared/cors";
+import { corsHeaders } from "../_shared/cors.ts";
 
 interface MintRequest {
   metadataUrl: string;
