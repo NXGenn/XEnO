@@ -240,6 +240,29 @@ export const MintPage = (): JSX.Element => {
                       </div>
                     </div>
 
+                    {nftDetails.onChain?.tokenId && (
+                      <div className="bg-web3-bg rounded-lg p-4">
+                        <div className="flex justify-between items-center mb-2">
+                          <span className="text-gray-400">Token ID</span>
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="h-8 px-2 text-web3-red hover:text-web3-red/80"
+                            onClick={() => copyToClipboard(nftDetails.onChain.tokenId!, 'tokenId')}
+                          >
+                            {copied === 'tokenId' ? (
+                              <CheckCheck className="h-4 w-4" />
+                            ) : (
+                              <Copy className="h-4 w-4" />
+                            )}
+                          </Button>
+                        </div>
+                        <p className="text-white font-mono text-sm break-all">
+                          {nftDetails.onChain.tokenId}
+                        </p>
+                      </div>
+                    )}
+
                     {nftDetails.onChain?.contractAddress && (
                       <div className="bg-web3-bg rounded-lg p-4">
                         <div className="flex justify-between items-center mb-2">
@@ -309,29 +332,6 @@ export const MintPage = (): JSX.Element => {
                             </div>
                           </div>
                         )}
-                      </div>
-                    )}
-
-                    {nftDetails.onChain?.tokenId && (
-                      <div className="bg-web3-bg rounded-lg p-4">
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="text-gray-400">Token ID</span>
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            className="h-8 px-2 text-web3-red hover:text-web3-red/80"
-                            onClick={() => copyToClipboard(nftDetails.onChain.tokenId!, 'tokenId')}
-                          >
-                            {copied === 'tokenId' ? (
-                              <CheckCheck className="h-4 w-4" />
-                            ) : (
-                              <Copy className="h-4 w-4" />
-                            )}
-                          </Button>
-                        </div>
-                        <p className="text-white font-mono text-sm break-all">
-                          {nftDetails.onChain.tokenId}
-                        </p>
                       </div>
                     )}
 
