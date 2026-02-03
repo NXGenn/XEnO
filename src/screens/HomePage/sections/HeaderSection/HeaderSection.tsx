@@ -15,6 +15,7 @@ export const HeaderSection = (): JSX.Element => {
 
   const navItems = [
     { text: "Mint", active: true, path: "/mint" },
+    { text: "Collection", active: false, path: "/collection" },
     { text: "Verify", active: false, path: "/verify" },
     { text: "Features", active: false, path: "/#features" },
     { text: "Documentation", active: false, path: "/docs" },

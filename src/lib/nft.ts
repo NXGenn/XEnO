@@ -166,3 +166,35 @@ export async function checkMintingStatus(mintingId: string) {
     throw new Error('An unexpected error occurred while checking minting status');
   }
 }
+
+export async function fetchCertificatesByWallet(walletAddress: string) {
+  try {
+    const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+    const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+    if (!supabaseUrl || !supabaseKey) {
+      throw new Error('Missing Supabase configuration');
+    }
+
+    const response = await fetch(`${supabaseUrl}/rest/v1/certificates?owner_wallet=eq.${walletAddress}&select=*&order=created_at.desc`, {
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${supabaseKey}`,
+        'apikey': supabaseKey,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch certificates');
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching certificates:', error);
+    if (error instanceof Error) {
+      throw error;
+    }
+    throw new Error('An unexpected error occurred while fetching certificates');
+  }
+}
